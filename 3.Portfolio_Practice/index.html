@@ -1,0 +1,414 @@
+<!--
+  Metadata in HTML: 
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adult Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio for world-renowned software engineer Ellie"
+    />
+    <meta name="author" content="Adult" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/d1c4614b85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/--* -->
+  </head>
+  <body>
+    <!-- Navnar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <img src="imgs/favicon.png" alt="favicon" width="17" />
+        <a href="index.html">SEONG-IN</a>
+      </div>
+      <div class="navbar__menu">
+        <ul>
+          <li class="navber__menu__item" data-link="#home">Home</li>
+          <li class="navber__menu__item" data-link="#about">About</li>
+          <li class="navber__menu__item" data-link="#skills">Skills</li>
+          <li class="navber__menu__item" data-link="#work">My work</li>
+          <li class="navber__menu__item" data-link="#testimonials">
+            Testimonials
+          </li>
+          <li class="navber__menu__item" data-link="#contact">Contact</li>
+        </ul>
+      </div>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="home__fade-out">
+        <img
+          src="imgs/avatar.jpeg"
+          alt="Sungin's profile photo"
+          class="home__avatar"
+          width="200px"
+        />
+        <h1 class="home__title">Hello,<br />I'm Frontend engineer</h1>
+        <h2 class="home__description">A Frontend Engineer</h2>
+        <button class="home__contact">contact me</button>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section__container">
+      <h1>About me</h1>
+      <p>
+        처음 개발자의 길로 들어선 건 FA 소프트웨어 개발자였습니다. 일하면서 가장
+        좋았던 것은 내가 만든 프로그램으로 움직이는 기계들을 직관적으로 볼
+        수있는 게 가장 좋았던 점이였습니다. 이러한 부분이 프론트엔드 개발자가
+        일을 하며 느끼는 것과 같다고 생각하여 프론트엔드 개발자로 한 걸음 내딛기
+        시작하였습니다.
+      </p>
+      현재는 Html, CSS, Javascript, React, Git 등 프론트엔드를 공부하며 준비된
+      개발자로 성장하기 위해 노력 중입니다.
+      <div class="about__majors">
+        <div class="majors">
+          <div class="majors__icon">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h2 class="majors__title">Font-end</h2>
+          <div class="majors__description">
+            HTML,CSS,Javascript, <br />Typescript,React,Vue,Web APIs
+          </div>
+        </div>
+        <div class="majors">
+          <div class="majors__icon">
+            <i class="fa-solid fa-c"></i>
+          </div>
+          <h2 class="majors__title">C++</h2>
+        </div>
+      </div>
+      <div class="about__jobs">
+        <img src="imgs/hims_logo.png" alt="jobs logo" class="job__logo" />
+        <div class="job__description">
+          <p class="job__name">HIMS</p>
+          <p class="job__period">bad company</p>
+        </div>
+      </div>
+      <div class="about__jobs">
+        <img src="imgs/hims_logo.png" alt="jobs logo" class="job__logo" />
+        <div class="job__description">
+          <p class="job__name">HIMS</p>
+          <p class="job__period">bad company</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attribute</h2>
+        <p>
+          Experience whit all phases of the software life-cycle. Passion for
+          learning new technologies. Capable
+        </p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Javascript</span>
+                <span>80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>CSS</span>
+                <span>70%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li>
+                  <span>RAD Studio Berlin C++ Builder - Embarcadero</span>
+                </li>
+                <li><span>Atom</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section__container">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+          <button
+            class="category__btn selected"
+            data-category="all"
+            data-fillter="all"
+          >
+            ALL<span class="category__count">7</span>
+          </button>
+          <button
+            class="category__btn"
+            data-category="html"
+            data-fillter="html"
+          >
+            HTML<span class="category__count">3</span>
+          </button>
+          <button class="category__btn" data-category="css" data-fillter="css">
+            CSS<span class="category__count">3</span>
+          </button>
+          <button
+            class="category__btn"
+            data-category="javascript"
+            data-fillter="javascript"
+          >
+            Javascript<span class="category__count">1</span>
+          </button>
+        </div>
+
+        <div class="work__projects">
+          <a
+            data-type="html"
+            data-work="img1"
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project1.png"
+              alt="project1"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            data-type="html"
+            data-work="img2"
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project2.png"
+              alt="project2"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            data-type="html"
+            data-work="img3"
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project3.png"
+              alt="project3"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            data-type="css"
+            data-work="img4"
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project4.png"
+              alt="project4"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            data-type="css"
+            data-work="img5"
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project5.png"
+              alt="project5"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            data-type="css"
+            data-work="img6"
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project6.png"
+              alt="project6"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            data-type="javascript"
+            data-work="img7 "
+            href="https://github.com/Adult96/Portfolio"
+            class="project"
+            target="_blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/projects/project7.png"
+              alt="project7"
+            />
+            <div class="project__description">
+              <h3>project</h3>
+              <span>Clone_coding with HTML and CSS</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="section__container">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="imgs/people1-200515-154332.webp"
+              alt="People"
+              class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                정말로 훌륭한 사람입니다. 열정적이고 긍정적이고 팀원과의 호흡이
+                좋습니다.앞으로도 잘 헤쳐나갈수 있을것 같습니다.정말로 훌륭한
+                사람입니다. 열정적이고 긍정적이고 팀원과의 호흡이
+                좋습니다.앞으로도 잘 헤쳐나갈수 있을것 같습니다.정말로 훌륭한
+                사람입니다. 열정적이고 긍정적이고 팀원과의 호흡이
+                좋습니다.앞으로도 잘 헤쳐나갈수 있을것 같습니다.정말로 훌륭한
+                사람입니다. 열정적이고 긍정적이고 팀원과의 호흡이
+                좋습니다.앞으로도 잘 헤쳐나갈수 있을것 같습니다.<br />
+              </p>
+              <p class="name">
+                <a
+                  href="https://www.samsung.com/sec/smartphones/all-smartphones/"
+                  >sungin</a
+                >
+                / samsung
+              </p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                정말로 훌륭한 사람입니다. 열정적이고 긍정적이고 팀원과의 호흡이
+                좋습니다.앞으로도 잘 헤쳐나갈수 있을것 같습니다.<br />
+              </p>
+              <p class="name">
+                <a
+                  href="https://www.samsung.com/sec/smartphones/all-smartphones/"
+                  >sungin</a
+                >
+                / samsung
+              </p>
+            </div>
+            <img
+              src="imgs/people1-200515-154332.webp"
+              alt="People"
+              class="testimonial__avatar"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's talk</h1>
+      <h2 class="contact__email">djxor007@gmail.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/Adult96" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <div class="contact__right">
+        2022 Sungin Portfolio - All right reserved
+      </div>
+    </section>
+
+    <!-- Arrow up -->
+    <button class="arrow__up">
+      <i class="fa-solid fa-circle-arrow-up"></i>
+    </button>
+  </body>
+</html>

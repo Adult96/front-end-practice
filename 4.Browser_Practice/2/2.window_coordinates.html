@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Coordinates</title>
+
+    <style>
+      body {
+        background-color: black;
+        /* overflow: hidden; */
+      }
+
+      .box {
+        background-color: antiquewhite;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 4px;
+        border-radius: 4px;
+      }
+
+      .box.box1 {
+        background-color: lightsalmon;
+      }
+
+      .btn {
+        position: fixed;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <input type="button" class="scroll-by" value="scroll by 100px(y)" />
+      <input type="button" class="scroll-to" value="scroll to 100px(y)" />
+      <input type="button" class="scroll-into" value="scroll into box1" />
+    </div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box box1"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+      const box1 = document.querySelector('.box1');
+      box1.addEventListener('click', (e) => {
+        console.log(box1.getBoundingClientRect());
+        console.log(`client: ${e.clientX}, ${e.clientY}`);
+        console.log(`page: ${e.pageX}, ${e.pageY}`);
+      });
+
+      const windowScrollBy = document.querySelector('.scroll-by');
+      windowScrollBy.addEventListener('click', () => {
+        window.scrollBy(0, 100);
+      });
+
+      const windowScrollTo = document.querySelector('.scroll-to');
+      windowScrollTo.addEventListener('click', () => {
+        window.scrollTo(0, 100);
+      });
+
+      const windowScrollInto = document.querySelector('.scroll-into');
+      windowScrollInto.addEventListener('click', () => {
+        box1.scrollIntoView();
+      });
+    </script>
+  </body>
+</html>

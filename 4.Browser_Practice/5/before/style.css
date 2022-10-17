@@ -1,0 +1,125 @@
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+.main {
+  position: relative;
+  top: 40px;
+  width: 300px;
+  margin: auto;
+  background: url(img/background.png) no-repeat center/cover;
+  border-radius: 10px;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  color: var(--color-white);
+  background: transparent;
+  padding: 10px 0;
+  font-size: var(--font-medium);
+}
+
+.lists {
+  height: 500px;
+  background-color: var(--color-light-white);
+  overflow: auto;
+}
+
+.list {
+  color: var(--color-pink);
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: var(--font-medium);
+}
+
+.list__del {
+  font-size: 100%;
+  cursor: pointer;
+  height: auto;
+  outline: none;
+  border: none;
+}
+
+.list__del:hover {
+  transform: scale(1.2);
+  transition: all var(--animation-duration) ease;
+}
+
+input {
+  display: block;
+  height: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: var(--font-);
+}
+
+.add__bar {
+  background: transparent;
+  text-align: center;
+}
+
+.add__btn {
+  color: var(--color-white);
+  display: inline-block;
+  font-size: var(--font-large);
+  padding: 5px;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.add__btn:hover {
+  color: var(--color-pink);
+  transform: scale(1.1);
+  transition: all var(--animation-duration) ease;
+}
+
+i {
+  pointer-events: none;
+}

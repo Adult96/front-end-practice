@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" value="hi" onclick="alert('hi')">
+    <ul>
+      <script>
+        var coworkers = ['a','b','c','d','park'];
+      </script>
+      <h2>Coworkers</h2>
+      <script>
+      for(var i=0; i<coworkers.length; i++){
+        document.write('<li>'+coworkers[i]+'</li>');
+      }
+      </script>
+      <h2>매개 변수와 인자</h2>
+      <script>
+        function onePlusone(self){
+          document.write(self+'<br>');
+        }
+        onePlusone(2+2);
+
+        function sum(left,right){ //sum 함수의 (left,right)는 매개변수(argument)
+            document.write(left+right+'<br>');
+        }
+        sum(2,3);//sum(2,3) 함수의 2와 3은 인자(parameter)
+        sum(3,4);
+      </script>
+      <h2>함수의 리턴</h2>
+      <script>
+        function value(a,b){
+          return document.write(a+b);
+        }
+        value(1,2);
+      </script>
+      <h2>객체(object) 쓰기와 읽기</h2>
+      <script>
+        var folder = {
+          "a":"에이",//"a" 변수(property)
+          "b":"비", //"b" 변수(property)
+          "c":"씨"  //"c" 변수(property)
+        }
+
+        document.write("a :"+folder.a+"<br>");
+        document.write("b :"+folder.b+"<br>");
+        document.write("c :"+folder.c+"<br>");
+        folder.d = "디";
+        document.write("d :"+folder.d+"<br>");
+        folder["abc 에이비"] = "에이비씨";
+        document.write("abc :"+folder["abc 123"]+"<br>");
+
+        document.write(Object.entries(folder)+"<br>");
+      </script>
+      <h2>iterate</h2><!--객체 반복-->
+      <script>
+      for (var keys in folder){
+        document.write(keys+":"+folder[keys]+"<br>");
+      }
+      </script>
+      <h2>property & method</h2><!--객체에 속한 함수(method),객체에 속한 함수의 변수(property)-->
+      <script>
+        //함수 정의 방법
+        folder.showall = function(){
+          for (var keys in this){
+            if(keys === "showall")break;
+            document.write(keys+":"+this[keys]+"<br>");
+          }
+        }
+        folder.showall();
+        //함수 정의 방법
+        var a = function(){
+
+        }
+        //함수 정의 방법
+        function b(){
+
+        }
+
+      </script>
+    </ul>
+  </body>
+</html>

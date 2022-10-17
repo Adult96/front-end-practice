@@ -1,0 +1,15 @@
+body{
+    background-color: beige;
+}
+.title1{
+    display: inline-block;
+}
+
+.clicked{
+    color: blue;
+    transition:color 500ms ease-in-out;
+}
+
+.bodyBackgroundColor{
+    background-color: rgb(222, 138, 138);
+}

@@ -1,0 +1,162 @@
+:root {
+  --carrot-pos-x: 0px;
+  --carrot-pos-y: 0px;
+  --bug-pos-x: 0px;
+  --bug-pos-y: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  background-color: black;
+}
+
+i {
+  pointer-events: none;
+}
+
+.main {
+  margin: auto;
+  margin-top: 30px;
+  width: 900px;
+  height: 600px;
+  background: url(img/background.png) no-repeat center/cover;
+  border-radius: 20px;
+}
+
+.menu {
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+
+.play__btn,
+.stop__btn {
+  width: 50px;
+  font-size: 35px;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.play__btn.hidden {
+  display: none;
+}
+
+.play__btn:hover {
+  color: coral;
+  transition: all 300ms ease;
+}
+
+.stop__btn.hidden {
+  display: none;
+}
+
+.stop__btn:hover {
+  color: coral;
+  transition: all 300ms ease;
+}
+
+.timer {
+  margin: auto;
+  border: 2px solid black;
+  height: 50px;
+  width: 100px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.cnt {
+  margin: auto;
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  background-color: antiquewhite;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.create__item {
+  position: relative;
+  top: 150px;
+  height: 230px;
+  width: 90%;
+  margin: auto;
+}
+
+.carrot {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  background: url(img/carrot.png) no-repeat center/cover;
+  transition: all 300ms ease;
+}
+
+.carrot:hover {
+  transform: scale(1.2);
+}
+
+.bug {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  background: url(img/bug.png) no-repeat center/cover;
+  transition: all 300ms ease;
+}
+
+.bug:hover {
+  transform: scale(1.2);
+}
+
+.alert__background {
+  position: absolute;
+  top: 0px;
+  margin: auto;
+  margin-top: 30px;
+  width: 900px;
+  height: 600px;
+  background-color: black;
+  border-radius: 20px;
+  opacity: 0.5;
+}
+
+.alert.hidden {
+  display: none;
+}
+
+.alert__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  margin: auto;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  font-size: 40px;
+}
+
+.alert__retry-btn {
+  margin-top: 5px;
+  font-size: 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+.alert__retry-btn:hover {
+  color: coral;
+  transition: all 300ms ease;
+}
